@@ -1,0 +1,10 @@
+#Limpiar y dejar solo valores numéricos en una columna
+#df['A'] = df['A'].apply(lambda x: re.sub("[^\d\.]", '', str(x)))
+
+#convertir caracteres con puntos y comas como separadores a float
+#df['A'] = df['Monto'].replace({'\.':''}, regex = True).replace({',':'.'}, regex = True).astype(float)
+
+
+#mapear en base a columna booleana con numpy (condicion, valor si verdadero, valor si falso)
+df['x_mapeada'] = np.nan
+df['x_mapeada'] = pd.Series(np.where(df['A'] ==  True, 'Bla', df['B']))
