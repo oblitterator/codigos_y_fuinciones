@@ -8,3 +8,14 @@
 #mapear en base a columna booleana con numpy (condicion, valor si verdadero, valor si falso)
 df['x_mapeada'] = np.nan
 df['x_mapeada'] = pd.Series(np.where(df['A'] ==  True, 'Bla', df['B']))
+
+#maximas columnas/rows
+pd.set_option('display.max_columns', None)
+pd.reset_option("display.max_columns")
+
+#maxima longitud de columnas
+
+pd.set_option("display.max_colwidth", )
+
+
+
